@@ -4,7 +4,7 @@ This is a take home assignment in electron.js for a prospective candidate.
 
 ## Assignment Details
 
-I had a couple of issues with npm, as the packages slightly differ when using ```npm install`` between Windows and Mac. The server starts running when the main window is created, and then the data is fetched by HomePage.js.
+I had a couple of issues with npm, as the packages slightly differ when using ```npm install``` between Windows and Mac. The server starts running when the main window is created, and then the data is fetched by HomePage.js.
 
 The code has been configured to support the file path system of Windows and Mac. In addition, the Unix Executable is run by Mac systems and the exe file is run by Windows systems.
 
