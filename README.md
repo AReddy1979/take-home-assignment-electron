@@ -2,11 +2,18 @@
 
 This is a take home assignment in electron.js for a prospective candidate.
 
+## Assignment Details
+
+I had a couple of issues with npm, as the packages slightly differ when using ```npm install`` between Windows and Mac. The server starts running when the main window is created, and then the data is fetched by HomePage.js.
+
+The code has been configured to support the file path system of Windows and Mac. In addition, the Unix Executable is run by Mac systems and the exe file is run by Windows systems.
+
 ## Assignment
 
 Create a simple server using express.js. The server should have a GET request endpoint that sends the result from main.exe python executable found in the "src/python" folder to the file named "HomePage" found in the "src" folder.
 
-You should be able to run the app with both "npm start" and the executable (distributable) named "my-app" which is built using "npm run make" on a machine that does not have python installed.
+MANDATORY: You should be able to run the app with both "npm start" and the executable (distributable) named "my-app" which is built using "npm run make" on a machine that does not have python installed.
+DO NOT make a separate command to run the server alone.
 
 I have attached two png files called "finalResultGreet.png" and "finalResultSquare.png" that shows the expected result of the app depending on whether you choose "greet" or "square".
 
