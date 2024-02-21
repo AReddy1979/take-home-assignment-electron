@@ -1,16 +1,16 @@
 import express, { Request, Response } from 'express';
 import { SERVER_PORT} from "./constants";
-const cors = require('cors');
 const app = express();
 
 function findPath(inputString:string) {
   // Find the index of the last occurrence of '/'
-  const arr = inputString.split('/');
+  const os = isWin();
+  const arr = os ? inputString.split('\\') : inputString.split('/');
 
   for(let i = 0; i < arr.length; i++) {
     if(arr[i] == "take-home-assignment-electron") {
       console.log(arr.slice(0,i+1).join("/"));
-      return isWin() ? arr.slice(0,i+1).join("/")+"/src/python/main.exe" : arr.slice(0,i+1).join("/")+"/src/python/dist/main";
+      return isWin() ? arr.slice(0,i+1).join("/")+"\\src\\python\\main.exe" : arr.slice(0,i+1).join("/")+"/src/python/dist/main";
     }
   }
 
