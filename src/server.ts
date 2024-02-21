@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
 import { SERVER_PORT} from "./constants";
+import {spawn} from "child_process";
 const app = express();
 
 function findPath(inputString:string) {
@@ -32,7 +33,6 @@ function isWin() {
 
 // Define a route for the GET request
   app.get('/', (req: Request, res: Response) => {
-    const { spawn } = require('child_process');
     const pathName = findPath(__dirname);
     //const pythonProcess = spawn(pathName, ['square','4']);
     const pythonProcess = spawn(pathName, ['greet','Daniel']);
